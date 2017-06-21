@@ -2,11 +2,13 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.TributeTitle;
+    ViewBag.ShowBackBar = true;
 }
 
 
     <h1 class="tribute-title">Tribute to @Model.TributeTitle</h1>
-<div class="row">
+<div class="tribute-row">
     <div class="col-md-6">
         <img src="~/Images/@Model.ImageLink" alt="@Model.TributeTitle" class="img-responsive" />
     </div>

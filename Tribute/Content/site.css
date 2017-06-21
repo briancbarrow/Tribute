@@ -9,7 +9,32 @@
 .tribute-title {
     text-align: center;
 }
+.tribute-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+img.img-responsive.list-img {
+    width: 150px;
+    height: 220px;
+}
+.list-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-item {
+    flex: 1 1 auto;
+    max-width: 300px;
+    text-align: center;
+}
 
+@media screen and (max-width: 750px) {
+    .list-row {
+        justify-content: center;
+    }
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

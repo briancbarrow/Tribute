@@ -79,6 +79,7 @@ namespace Tribute.Data
                 if (tribute.Id == id)
                 {
                     tributeToReturn = tribute;
+                    break;
                 }
             }
 

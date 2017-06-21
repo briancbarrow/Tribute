@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC Tribute Site - @Model.TributeTitle</title>
+    <title>FCC Tribute Site - @ViewBag.Title</title>
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("FCC Tribute Site", "Index", "Tributres", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("FCC Tribute Site", "Index", "Tributes", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -26,6 +26,15 @@
             </div>
         </div>
     </div>
+
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+        <div class="backbar">
+            <div class="container">
+                @Html.ActionLink("Return to List", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    }
 
     <div class="container body-content">
         @RenderBody()

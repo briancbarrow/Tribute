@@ -1,7 +1,25 @@
-﻿
+﻿@model Tribute.Models.SingleTribute[]
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tributes";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
+<div class="row list-row">
+    @foreach (var tribute in Model)
+    {
+        <div class="col-md-3 list-item">
+            <h4>
+                @Html.ActionLink(tribute.DisplayText, "Detail",
+               new { id = tribute.Id })
+        </h4>
+        <a href="@Url.Action("Detail", new { id = tribute.Id }) ">
+            <img src="/Images/@tribute.ImageLink"
+                 alt="@tribute.DisplayText"
+                 class="img-responsive list-img" />
+        </a>
+    </div>
+    }
+
+</div>
