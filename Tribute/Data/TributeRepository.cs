@@ -65,7 +65,10 @@ namespace Tribute.Data
             }
         };
 
-
+        public SingleTribute[] GetTributes()
+        {
+            return _tributes;
+        }
 
         public SingleTribute GetTribute(int id)
         {

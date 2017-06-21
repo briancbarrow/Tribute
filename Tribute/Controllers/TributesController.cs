@@ -17,6 +17,13 @@ namespace Tribute.Controllers
             _tributeRepository = new TributeRepository();
         }
 
+        public ActionResult Index()
+        {
+            var tributes = _tributeRepository.GetTributes();
+
+            return View(tributes);
+        }
+
         public ActionResult Detail(int? id)
         {
             if (id == null)
