@@ -1,24 +1,26 @@
-﻿@{
+﻿@model Tribute.Models.SingleTribute
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Tribute Detail";
 }
 
 <div>
-    <h1>Tribute to @ViewBag.TributeTitle</h1>
-    <h5>Description:</h5>
-    <div>@Html.Raw(ViewBag.Description)</div>
-    @if (ViewBag.Artists.Length > 0)
+    <h1>Tribute to @Model.TributeTitle</h1>
+    <div>@Html.Raw(Model.BioDescriptionHtml)</div>
+    @if (Model.BioDates.Length > 0)
     {
         <div>
             <ul>
-                @foreach (var artist in ViewBag.Artists)
+                @foreach (var date in Model.BioDates)
             {
                     <text>
-                        <li>@artist</li> </text>
+                        <li><strong>@date.Year: </strong>@date.Event</li> </text>
                 }
             </ul>
         </div>
     }
+    <div>To learn more, visit the <a class="external-link" href="@Model.ExternalLink" target="_blank">Wikipedia Page</a>.</div>
         
 </div>
 

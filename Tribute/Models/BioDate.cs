@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tribute.Models
 {
-    public class Date
+    public class BioDate
     {
         public string Year { get; set; }
         public string Event { get; set; }
