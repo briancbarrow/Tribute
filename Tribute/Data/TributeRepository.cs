@@ -12,8 +12,9 @@ namespace Tribute.Data
         {
             new SingleTribute()
             {
+                Id = 1,
                 TributeTitle = "His Holiness The Dalai Lama",
-                BioDescriptionHtml = "<p>Tenzin Gyatso is the current and 14th Dalai Lama</p>",
+                BioDescriptionHtml = "Tenzin Gyatso is the current and 14th Dalai Lama",
                 BioDates = new BioDate[]
                {
                     new BioDate() { Year = "1935", Event = "Born in Taktser village, Amdo, Tibet." },
@@ -23,14 +24,15 @@ namespace Tribute.Data
                     new BioDate() { Year = "1959", Event = "Fled to India" },
                     new BioDate() { Year = "1989", Event = "Received Nobel Peace Prize" },
                },
-                ImageLink = "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjtirWiwM_UAhXBmpQKHebmBs0QjRwIBw&url=http%3A%2F%2Fwww.newsweek.com%2Fi-am-marxist-says-dalai-lama-299598&psig=AFQjCNGsQ3BXL0vc0O7BZUyETflJwOU26Q&ust=1498153868280253",
+                ImageLink = "dalai-lama.jpg",
                 ExternalLink = "https://en.wikipedia.org/wiki/14th_Dalai_Lama"
             },
 
             new SingleTribute()
             {
+                Id = 2,
                 TributeTitle = "Samuel Clemens (Mark Twain)",
-                BioDescriptionHtml = "<p>Mark Twain, was an American writer, humorist, entrepreneur, publisher, and lecturer</p>",
+                BioDescriptionHtml = "Mark Twain, was an American writer, humorist, entrepreneur, publisher, and lecturer",
                 BioDates = new BioDate[]
                {
                     new BioDate() { Year = "1835", Event = "Born in Florida, Missouri, USA." },
@@ -40,14 +42,15 @@ namespace Tribute.Data
                     new BioDate() { Year = "1904", Event = "Wife Olivia died." },
                     new BioDate() { Year = "1910", Event = "Died in Redding, Connecticut, USA." },
                },
-                ImageLink = "https://en.wikipedia.org/wiki/File:Mark_Twain_by_Abdullah_Fr%C3%A8res,_1867.jpg",
+                ImageLink = "mark-twain.jpg",
                 ExternalLink = "https://en.wikipedia.org/wiki/Mark_Twain"
             },
 
         new SingleTribute()
         {
+            Id = 3,
             TributeTitle = "Frederick Douglass",
-                BioDescriptionHtml = "<p>Frederick Douglass was an African-American social reformer, abolitionist, orator, writer, and statesman.</p>",
+                BioDescriptionHtml = "Frederick Douglass was an African-American social reformer, abolitionist, orator, writer, and statesman",
                 BioDates = new BioDate[]
                {
                     new BioDate() { Year = "1818", Event = "Born in Talbot County, Maryland, USA." },
@@ -57,10 +60,12 @@ namespace Tribute.Data
                     new BioDate() { Year = "1876", Event = "Delivered keynote speec at the unveiling of the Emancipation Memorial" },
                     new BioDate() { Year = "1895", Event = "Died in Washington, D.C., USA" },
                },
-                ImageLink = "https://en.wikipedia.org/wiki/File:Motto_frederick_douglass_2.jpg",
+                ImageLink = "douglass.jpg",
                 ExternalLink = "https://en.wikipedia.org/wiki/Frederick_Douglass"
             }
         };
+
+
 
         public SingleTribute GetTribute(int id)
         {
