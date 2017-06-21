@@ -8,6 +8,9 @@ namespace Tribute.Controllers
 {
     public class TributesController : Controller
     {
-
+        public string Detail()
+        {
+            return "Hello from Tribute Controller";
+        }
     }
 }
