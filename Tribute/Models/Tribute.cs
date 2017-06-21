@@ -13,5 +13,23 @@ namespace Tribute.Models
         public string ImageLink { get; set; }
         public string ExternalLink { get; set; }
         public Date[] BioDates { get; set; }
+
+        public string DisplayText
+        {
+            get
+            {
+                return TributeTitle;
+            }
+        }
+
+        //public string DisplayImageLink
+        //{
+        //    get
+        //    {
+        //        return 
+        //    }
+        //}
     }
+
+    
 }
