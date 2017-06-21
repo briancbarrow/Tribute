@@ -25,7 +25,19 @@
         <h1>Tribute to @tributeTitle</h1>
         <h5>Description:</h5>
         <div>@Html.Raw(description)</div>
-        <div>@artists</div>
+        @if (artists.Length > 0)
+        {
+            <div>
+                <ul>
+                    @foreach (var artist in artists)
+                {
+                        <text>
+                            <li>@artist</li> </text>
+                    }
+                </ul>
+            </div>
+        }
+        
     </div>
 </body>
 </html>
