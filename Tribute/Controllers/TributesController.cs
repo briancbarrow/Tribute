@@ -8,9 +8,14 @@ namespace Tribute.Controllers
 {
     public class TributesController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from Tribute Controller";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+            return Content("Hello from Tribute Controller");
+            
         }
     }
 }
